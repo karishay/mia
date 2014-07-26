@@ -1,1 +1,15 @@
 // Your custom SCSS should be written here...
+#footer {
+  bottom: 0px;
+  float-left: true;
+};
+
+@mixin center-block {
+display: block;
+margin-left: auto;
+margin-right: auto;
+};
+
+#logo {
+  @include center-block;
+};
