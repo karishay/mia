@@ -23,25 +23,48 @@ circle3.transform( 't-90, 190');
 //two mid orbit on top
 var circle4 = circle2.clone();
 circle4.transform( 't90, -190');
-
 var circle5 = circle3.clone();
 circle5.transform( 't-90, -190');
 
 //two mid orbits on left
 var circle6 = circle2.clone();
 circle6.transform( 't-190, 90');
-
 var circle7 = circle6.clone();
 circle7.transform( 't-190, -90');
 
 //two mid orbits on right
 var circle8 = circle6.clone();
 circle8.transform('t190, -90');
-
 var circle9 = circle7.clone();
 circle9.transform('t190, 90');
 
+// blue cardinal dots:
+var northDot = paper.circle(centerX, centerY-300, 12);
+northDot.attr({
+  fill: '#1C1F78',
+});
 
+var southDot = northDot.clone();
+southDot.transform('t0, 600');
+
+var eastDot = northDot.clone();
+eastDot.transform('t300, 300');
+
+var westDot = eastDot.clone();
+westDot.transform('t-300, 300');
+
+//blue inbetween dots
+var northEast = northDot.clone();
+northEast.transform('t210, 90');
+
+var northWest = northEast.clone();
+northWest.transform('t-210, 90');
+
+var southEast = northEast.clone();
+southEast.transform('t210, 515');
+
+var southWest = northWest.clone();
+southWest.transform('t-210, 515');
 ///////////////////////////////////////////////////////////////////////
 ////////////////////////// Orbits Here ////////////////////////////////
 ///////////////////////////////////////////////////////////////////////
